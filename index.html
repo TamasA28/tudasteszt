@@ -23,13 +23,13 @@
       color: #2a4d69;
     }
     #glossaryList {
-      display: none; /* kezdetben elrejtve */
+      display: none; /* ne látszódjon induláskor */
     }
   </style>
 </head>
 <body>
   <h1>Pénzügyi fogalmak kereső</h1>
-  <input id="searchInput" type="text" onkeyup="filterGlossary()" placeholder="Keresés a fogalmak között...">
+  <input id="searchInput" type="text" oninput="filterGlossary()" placeholder="Keresés a fogalmak között...">
   <div id="glossaryList">
     <div class="term-block"><strong>bankszámlapénz</strong><br>A bankszámlán jóváírt összeget nevezzük számlapénznek...</div>
     <div class="term-block"><strong>blokklánc</strong><br>A blokklánc egy olyan adatbázis...</div>
@@ -49,18 +49,17 @@
     <div class="term-block"><strong>Országos Betétbiztosítási Alap (OBA)</strong><br>Hitelintézet csődje esetén kártalanít...</div>
     <div class="term-block"><strong>többes ügynök</strong><br>Több biztosító ajánlatát is kínálja...</div>
   </div>
+
   <script>
     function filterGlossary() {
       const input = document.getElementById("searchInput").value.toLowerCase();
       const glossary = document.getElementById("glossaryList");
       const items = glossary.children;
 
-      if (input.trim() !== "") {
-        glossary.style.display = "block";
-      } else {
-        glossary.style.display = "none";
-      }
+      // Megjelenítés csak akkor, ha elkezd gépelni
+      glossary.style.display = input.trim() !== "" ? "block" : "none";
 
+      // Szűrés
       for (let i = 0; i < items.length; i++) {
         const text = items[i].textContent.toLowerCase();
         items[i].style.display = text.includes(input) ? "" : "none";
