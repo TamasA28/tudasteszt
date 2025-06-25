@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Pénzügyi fogalmak kereső</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .term-block {
+      margin-bottom: 16px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .term-block strong {
+      font-size: 18px;
+      color: #2a4d69;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pénzügyi fogalmak kereső</h1>
+  <input id="searchInput" type="text" onkeyup="filterGlossary()" placeholder="Keresés a fogalmak között...">
+  <div id="glossaryList">
+    <div class="term-block"><strong>bankszámlapénz</strong><br>A bankszámlán jóváírt összeget nevezzük számlapénznek.</div>
+    <div class="term-block"><strong>blokklánc</strong><br>A blokklánc egy elosztott adatbázis, amely tranzakciókat tárol biztonságosan.</div>
+    <div class="term-block"><strong>digitális pénztárca</strong><br>Alkalmazás vagy eszköz, amellyel digitális pénzt tudsz tárolni és használni.</div>
+    <div class="term-block"><strong>Európai Központi Bank (EKB)</strong><br>Az euróövezet központi bankja, felel az árstabilitásért.</div>
+    <div class="term-block"><strong>jóváírás</strong><br>Olyan tranzakció, amely növeli a bankszámlád egyenlegét.</div>
+  </div>
+  <script>
+    function filterGlossary() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.getElementById("glossaryList").children;
+      for (let i = 0; i < items.length; i++) {
+        const text = items[i].textContent.toLowerCase();
+        items[i].style.display = text.includes(input) ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>
