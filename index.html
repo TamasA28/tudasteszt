@@ -23,7 +23,7 @@
       color: #2a4d69;
     }
     #glossaryList {
-      display: none; /* ne látszódjon induláskor */
+      display: none; /* induláskor rejtve */
     }
   </style>
 </head>
@@ -31,40 +31,39 @@
   <h1>Pénzügyi fogalmak kereső</h1>
   <input id="searchInput" type="text" oninput="filterGlossary()" placeholder="Keresés a fogalmak között...">
   <div id="glossaryList">
-    <div class="term-block"><strong>bankszámlapénz</strong><br>A bankszámlán jóváírt összeget nevezzük számlapénznek...</div>
-    <div class="term-block"><strong>blokklánc</strong><br>A blokklánc egy olyan adatbázis...</div>
-    <div class="term-block"><strong>digitális pénztárca</strong><br>A digitális pénztárca egy olyan alkalmazás...</div>
-    <div class="term-block"><strong>Európai Központi Bank (EKB)</strong><br>Fő feladata az euró kezelése...</div>
-    <div class="term-block"><strong>jóváírás</strong><br>Amikor a bankszámlád egyenlege nő...</div>
+    <div class="term-block"><strong>bankszámlapénz</strong><br>A bankszámlán jóváírt összeget nevezzük számlapénznek. Ez a készpénzzel ellentétben digitális és nem kézzel fogható formában létezik. Bankszámlapénz lehet az az összeg, amit a számlatulajdonos elhelyez a folyószámláján, vagy arra valaki átutal neki, illetve az az összeg, amit a bank hitelként nyújt az ügyfelének, és ennek összegét jóváírja a számláján.</div>
+    <div class="term-block"><strong>blokklánc</strong><br>A blokklánc egy olyan adatbázis, amelyet nem centralizált hálózaton tárolnak. Az adatok olyan számítógépeken tárolódnak, amelyek az elosztott hálózat csomópontjain működnek. Abban az esetben, ha az adatbázisban változás történik (pl. fizetés), azt minden, a hálózatban lévő számítógép ellenőrzi, majd az adatbázis frissül.</div>
+    <div class="term-block"><strong>digitális pénztárca</strong><br>A digitális pénztárca egy olyan alkalmazás, amely használatával helyettesíthető a fizikai bankkártya. Miután letöltötted az alkalmazást és regisztráltál, hozzá kell rendelned a bankkártyádat, amit az alkalmazás a bankodnál hitelesít, és már használhatod is.</div>
+    <div class="term-block"><strong>Európai Központi Bank (EKB)</strong><br>Fő feladata az euró kezelése, az EU gazdasági és monetáris politikájának kialakítása, valamint végrehajtása.</div>
+    <div class="term-block"><strong>jóváírás</strong><br>Amikor a bankszámlád egyenlege egy pénzügyi művelet következtében növekszik.</div>
     <div class="term-block"><strong>kriptopénz</strong><br>Virtuális pénz. Fizikai formája nincs.</div>
-    <div class="term-block"><strong>alkusz</strong><br>Biztosításközvetítő, aki több ajánlatot ismer...</div>
-    <div class="term-block"><strong>biztosítás</strong><br>A biztosítás célja a károk enyhítése...</div>
-    <div class="term-block"><strong>biztosító</strong><br>A biztosító az a szervezet, amely biztosítást nyújt...</div>
-    <div class="term-block"><strong>fintech vállalat</strong><br>Digitális pénzügyi megoldásokat kínáló vállalat...</div>
-    <div class="term-block"><strong>függő ügynök</strong><br>Egy biztosító termékeit kínálja kizárólagosan...</div>
-    <div class="term-block"><strong>impulzív</strong><br>Gyors, ösztönös döntést hozó személy...</div>
-    <div class="term-block"><strong>insurtech vállalat</strong><br>Digitális biztosítási szolgáltatásokat kínáló cég...</div>
-    <div class="term-block"><strong>követeléskezelő</strong><br>Más szervezet megbízásából tartozást kezel...</div>
-    <div class="term-block"><strong>megtakarítás</strong><br>Olyan pénz, amit későbbre félreteszel...</div>
-    <div class="term-block"><strong>Országos Betétbiztosítási Alap (OBA)</strong><br>Hitelintézet csődje esetén kártalanít...</div>
-    <div class="term-block"><strong>többes ügynök</strong><br>Több biztosító ajánlatát is kínálja...</div>
+    <div class="term-block"><strong>alkusz</strong><br>Az alkusz több biztosító ajánlatát ismeri, segít összehasonlítani, tanácsot ad, és a te érdekeidet képviseli a biztosítóval történő tárgyalás során.</div>
+    <div class="term-block"><strong>biztosítás</strong><br>A biztosítás célja, hogy csökkentsék az előre nem látható események miatt bekövetkező károkat. Létezik olyan biztosítás is, amikor az előre biztosan bekövetkező eseményre kötünk biztosítást, például a nyugdíjbiztosítás.</div>
+    <div class="term-block"><strong>biztosító</strong><br>A biztosító olyan szervezet, amellyel szerződést köthetsz azért, hogy egy előre nem látott esemény bekövetkeztekor az anyagi jellegű károdat csökkenthesd.</div>
+    <div class="term-block"><strong>fintech vállalat</strong><br>A fintech cégek digitális pénzügyi megoldásokat kínálnak, amelyek gyorsabbak, olcsóbbak és egyszerűbbek a hagyományos banki szolgáltatásoknál.</div>
+    <div class="term-block"><strong>függő ügynök</strong><br>Ez az ügynök csak egy adott biztosító termékeit fogja veled megismertetni.</div>
+    <div class="term-block"><strong>impulzív</strong><br>Olyan személyekre használjuk, akik gyorsan, ösztönösen, alapos átgondolás nélkül döntenek.</div>
+    <div class="term-block"><strong>insurtech vállalat</strong><br>A fintech cégekhez hasonló, digitális biztosítási megoldásokat kínáló vállalkozás.</div>
+    <div class="term-block"><strong>követeléskezelő</strong><br>Olyan pénzügyi vállalkozás, amely más pénzügyi vállalkozás megbízásából az adósság behajtását intézi.</div>
+    <div class="term-block"><strong>megtakarítás</strong><br>Azt a pénzt nevezzük megtakarításnak, amit nem költesz el, hanem félreteszed későbbi felhasználásra.</div>
+    <div class="term-block"><strong>Országos Betétbiztosítási Alap (OBA)</strong><br>Ha egy hitelintézet nem tudja teljesíteni a betétesek felé a kötelezettségeit, akkor az OBA 100 ezer euróig kártalanítja őket.</div>
+    <div class="term-block"><strong>többes ügynök</strong><br>Több biztosító ajánlatát is kínálja, hogy a számodra legmegfelelőbb terméket választhasd ki.</div>
   </div>
 
   <script>
     function filterGlossary() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
+      const input = document.getElementById("searchInput").value.toLowerCase().trim();
       const glossary = document.getElementById("glossaryList");
-      const items = glossary.children;
+      const items = glossary.querySelectorAll(".term-block");
 
-      // Megjelenítés csak akkor, ha elkezd gépelni
-      glossary.style.display = input.trim() !== "" ? "block" : "none";
+      glossary.style.display = input !== "" ? "block" : "none";
 
-      // Szűrés
-      for (let i = 0; i < items.length; i++) {
-        const text = items[i].textContent.toLowerCase();
-        items[i].style.display = text.includes(input) ? "" : "none";
-      }
+      items.forEach(item => {
+        const termText = item.innerText.toLowerCase();
+        item.style.display = termText.includes(input) ? "block" : "none";
+      });
     }
   </script>
 </body>
 </html>
+
